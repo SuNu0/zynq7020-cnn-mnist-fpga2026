@@ -1,0 +1,245 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Oct 25 13:02:27 2026
+# Process ID         : 15648
+# Current directory  : <workspace>/cnn_mnist_haoyue_z7020_V3
+# Command line       : vivado.exe -mode batch -source scripts\run_v3_sim.tcl -log reports\v3_sim_tool.log -journal reports\v3_sim_tool.jou
+# Log file           : <workspace>/cnn_mnist_haoyue_z7020_V3/reports/v3_sim_tool.log
+# Journal file       : <workspace>/cnn_mnist_haoyue_z7020_V3\reports\v3_sim_tool.jou
+# Running On         : Su-nuo
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 9 8940HX with Radeon Graphics        
+# CPU Frequency      : 2395 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 16962 MB
+# Swap memory        : 16962 MB
+# Total Virtual      : 33924 MB
+# Available Virtual  : 5516 MB
+#-----------------------------------------------------------
+source {scripts\run_v3_sim.tcl}
+# set root [file normalize "[file dirname [info script]]/.."]
+# set mode [expr {[info exists ::env(CNN_SIM_LEGACY)] ? "legacy" : "v3"}]
+# set dir "$root/build/sim_$mode"
+# create_project sim_$mode $dir -part xc7z020clg400-2 -force
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 525.973 ; gain = 221.770
+# set_property target_simulator XSim [current_project]
+# if {$mode eq "legacy"} {
+#     add_files -norecurse [glob "$root/rtl/*.v"]
+#     set top tb_legacy
+#     set marker V1_REFERENCE_RTL_PASS
+# } else {
+#     add_files -norecurse "$root/rtl/axis_cnn_mnist_v3.v"
+#     set top tb_v3
+#     set marker V3_RTL_PASS
+# }
+# add_files -norecurse [glob "$root/rtl/*.mem"]
+# add_files -fileset sim_1 -norecurse "$root/tb/$top.sv"
+# add_files -fileset sim_1 -norecurse [glob "$root/tb/vectors/*.mem"]
+# set_property top $top [get_filesets sim_1]
+# set_property xsim.simulate.runtime 0ns [get_filesets sim_1]
+# update_compile_order -fileset sim_1
+# launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Sun Oct 25 13:02:56 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_v3'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_v3' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv1_bias.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv1_weight_1.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv1_weight_2.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv1_weight_3.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_bias.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_weight_11.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_weight_12.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_weight_13.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_weight_21.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_weight_22.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_weight_23.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_weight_31.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_weight_32.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/conv2_weight_33.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/fc_bias.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/fc_weight.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v2_conv1_bias.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v2_conv1_weight.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v2_conv2_bias.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v2_conv2_weight.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v2_fc_bias.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v2_fc_weight.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v3_conv1_bias.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v3_conv1_weight.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v3_conv2_bias.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v3_conv2_weight.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v3_fc_bias.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/v3_fc_weight.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/features1.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/features2.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/images.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/legacy_images.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/legacy_predictions.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/legacy_scores.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/predictions.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/scores.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/features1.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/features2.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/images.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/legacy_images.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/legacy_predictions.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/legacy_scores.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/predictions.mem'
+INFO: [SIM-utils-43] Exported '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/scores.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_v3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "<workspace>/cnn_mnist_haoyue_z7020_V3/rtl/axis_cnn_mnist_v3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_cnn_mnist
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<workspace>/cnn_mnist_haoyue_z7020_V3/tb/tb_v3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_v3
+INFO: [VRFC 10-2263] Analyzing Verilog file "<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_v3_behav xil_defaultlib.tb_v3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_v3_behav xil_defaultlib.tb_v3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "<workspace>/cnn_mnist_haoyue_z7020_V3/rtl/axis_cnn_mnist_v3.v" Line 3. Module axis_cnn_mnist doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axis_cnn_mnist
+Compiling module xil_defaultlib.tb_v3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_v3_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '<workspace>/cnn_mnist_haoyue_z7020_V3/build/sim_v3/sim_v3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_v3_behav -key {Behavioral:sim_1:Functional:tb_v3} -tclbatch {tb_v3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_v3.tcl
+## set curr_wave [current_wave_config]
+## if { [string length $curr_wave] == 0 } {
+##   if { [llength [get_objects]] > 0} {
+##     add_wave /
+##     set_property needs_save false [current_wave_config]
+##   } else {
+##      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+##   }
+## }
+WARNING: [Wavedata 42-489] Can't add object "/tb_v3/images" to the wave window because it has 470400 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/tb_v3/f1" to the wave window because it has 1382400 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/tb_v3/f2" to the wave window because it has 307200 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+## run 0ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_v3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 546.977 ; gain = 21.004
+# if {$mode eq "legacy"} {run 3ms} else {run 950ms}
+V3_CASE_PASS id=0 digit=0 cycles=979837
+V3_CASE_PASS id=1 digit=0 cycles=1959936
+V3_CASE_PASS id=2 digit=0 cycles=2939701
+V3_CASE_PASS id=3 digit=0 cycles=3919802
+V3_CASE_PASS id=4 digit=1 cycles=4899569
+V3_CASE_PASS id=5 digit=1 cycles=5879672
+V3_CASE_PASS id=6 digit=1 cycles=6859441
+V3_CASE_PASS id=7 digit=1 cycles=7839546
+V3_CASE_PASS id=8 digit=2 cycles=8819317
+V3_CASE_PASS id=9 digit=2 cycles=9799424
+V3_CASE_PASS id=10 digit=2 cycles=10779197
+V3_CASE_PASS id=11 digit=2 cycles=11759295
+V3_CASE_PASS id=12 digit=3 cycles=12739059
+V3_CASE_PASS id=13 digit=3 cycles=13719159
+V3_CASE_PASS id=14 digit=3 cycles=14698925
+V3_CASE_PASS id=15 digit=3 cycles=15679027
+V3_CASE_PASS id=16 digit=4 cycles=16658795
+V3_CASE_PASS id=17 digit=4 cycles=17638899
+V3_CASE_PASS id=18 digit=4 cycles=18618669
+V3_CASE_PASS id=19 digit=4 cycles=19598775
+V3_CASE_PASS id=20 digit=5 cycles=20578547
+V3_CASE_PASS id=21 digit=5 cycles=21558655
+V3_CASE_PASS id=22 digit=5 cycles=22538418
+V3_CASE_PASS id=23 digit=5 cycles=23518517
+V3_CASE_PASS id=24 digit=6 cycles=24498282
+V3_CASE_PASS id=25 digit=6 cycles=25478383
+V3_CASE_PASS id=26 digit=6 cycles=26458150
+V3_CASE_PASS id=27 digit=6 cycles=27438253
+V3_CASE_PASS id=28 digit=7 cycles=28418022
+V3_CASE_PASS id=29 digit=7 cycles=29398127
+V3_CASE_PASS id=30 digit=7 cycles=30377898
+V3_CASE_PASS id=31 digit=7 cycles=31358005
+V3_CASE_PASS id=32 digit=8 cycles=32337778
+V3_CASE_PASS id=33 digit=8 cycles=33317876
+V3_CASE_PASS id=34 digit=8 cycles=34297640
+V3_CASE_PASS id=35 digit=8 cycles=35277740
+V3_CASE_PASS id=36 digit=9 cycles=36257506
+V3_CASE_PASS id=37 digit=9 cycles=37237608
+V3_CASE_PASS id=38 digit=9 cycles=38217376
+V3_CASE_PASS id=39 digit=9 cycles=39197480
+V3_CASE_PASS id=40 digit=0 cycles=40177250
+V3_CASE_PASS id=41 digit=0 cycles=41157356
+V3_CASE_PASS id=42 digit=1 cycles=42137128
+V3_CASE_PASS id=43 digit=1 cycles=43117236
+V3_CASE_PASS id=44 digit=2 cycles=44096999
+V3_CASE_PASS id=45 digit=2 cycles=45077098
+V3_CASE_PASS id=46 digit=3 cycles=46056863
+V3_CASE_PASS id=47 digit=3 cycles=47036964
+V3_CASE_PASS id=48 digit=4 cycles=48016731
+V3_CASE_PASS id=49 digit=4 cycles=48996834
+V3_CASE_PASS id=50 digit=5 cycles=49976603
+V3_CASE_PASS id=51 digit=5 cycles=50956708
+V3_CASE_PASS id=52 digit=6 cycles=51936479
+V3_CASE_PASS id=53 digit=6 cycles=52916586
+V3_CASE_PASS id=54 digit=7 cycles=53896359
+V3_CASE_PASS id=55 digit=7 cycles=54876457
+V3_CASE_PASS id=56 digit=8 cycles=55856221
+V3_CASE_PASS id=57 digit=8 cycles=56836321
+V3_CASE_PASS id=58 digit=9 cycles=57816087
+V3_CASE_PASS id=59 digit=9 cycles=58796189
+V3_CASE_PASS id=60 digit=0 cycles=59775957
+V3_CASE_PASS id=61 digit=1 cycles=60756061
+V3_CASE_PASS id=62 digit=2 cycles=61735831
+V3_CASE_PASS id=63 digit=3 cycles=62715937
+V3_CASE_PASS id=64 digit=4 cycles=63695709
+V3_CASE_PASS id=65 digit=5 cycles=64675817
+V3_CASE_PASS id=66 digit=6 cycles=65655580
+V3_CASE_PASS id=67 digit=7 cycles=66635679
+V3_CASE_PASS id=68 digit=8 cycles=67615444
+V3_CASE_PASS id=69 digit=9 cycles=68595545
+V3_CASE_PASS id=70 digit=1 cycles=69575312
+V3_CASE_PASS id=71 digit=5 cycles=70555415
+V3_CASE_PASS id=72 digit=8 cycles=71535184
+V3_CASE_PASS id=73 digit=8 cycles=72515289
+V3_CASE_PASS id=74 digit=3 cycles=73495060
+V3_RTL_PASS cases=75 pooled_values=105600 scores=750
+$finish called at time : 734950710 ns : File "<workspace>/cnn_mnist_haoyue_z7020_V3/tb/tb_v3.sv" Line 72
+run: Time (s): cpu = 00:01:08 ; elapsed = 00:01:22 . Memory (MB): peak = 546.977 ; gain = 0.000
+# close_sim
+INFO: xsimkernel Simulation Memory Usage: 21088 KB (Peak: 21088 KB), Simulation CPU Usage: 67515 ms
+INFO: [Simtcl 6-16] Simulation closed
+# set log "$dir/sim_$mode.sim/sim_1/behav/xsim/simulate.log"
+# set fd [open $log]
+# set body [read $fd]
+# close $fd
+# file copy -force $log "$root/reports/${mode}_simulation.log"
+# if {[string first $marker $body]<0 || [regexp -nocase {Fatal:|Error:} $body]} {error "${mode}_SIMULATION_FAILED"}
+# puts $marker
+V3_RTL_PASS
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 13:04:35 2026...

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>手写数字识别 · V3</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f5fa;color:#16243a;font:16px system-ui,"Microsoft YaHei",sans-serif}
+main{max-width:920px;margin:64px auto;padding:0 24px}small{color:#53708c;letter-spacing:.12em}h1{font-size:34px;margin:12px 0}p{color:#5a6b80;line-height:1.7}
+.panel{background:white;border:1px solid #e1e7f0;border-radius:22px;padding:28px;margin-top:28px;display:flex;gap:36px;flex-wrap:wrap}
+canvas{display:block;background:#000;border-radius:12px;width:280px;height:280px;touch-action:none;cursor:crosshair}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:18px}button,.upload{border:1px solid #d2dce8;background:#fff;border-radius:10px;padding:11px 18px;font:inherit;cursor:pointer;color:inherit}
+button.primary{background:#2563eb;border-color:#2563eb;color:white}button:disabled{opacity:.5;cursor:wait}.info{flex:1;min-width:235px}.digit{font-size:88px;font-weight:700;line-height:1.25;margin:12px 0}
+#preview{width:112px;height:112px;image-rendering:pixelated;border-radius:10px;background:#000}#status{font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}label{font-size:14px;color:#5a6b80}.foot{font-size:13px}.badge{display:inline-block;padding:5px 10px;border-radius:30px;background:#eaf1ff;color:#2758ac;font-size:12px}
+</style>
+<main><small>HAOYUE · ZYNQ-7020</small><h1>手写数字识别 <span class="badge">V3</span></h1>
+<p>写一个 0–9 的数字。系统会自动裁剪、缩放、居中，再交给开发板识别。</p>
+<section class="panel"><div><canvas id="canvas" width="280" height="280" aria-label="手写数字画布"></canvas>
+<div class="tools"><button class="primary" id="predict">识别数字</button><button id="clear">清空</button><label class="upload">上传图片<input id="file" type="file" accept="image/png,image/jpeg" hidden></label></div>
+<div class="tools"><label>笔画粗细 <input id="width" type="range" min="12" max="36" value="22"></label></div></div>
+<div class="info"><label>识别结果</label><div class="digit" id="result">—</div><label>送入开发板的 28×28 图像</label><p><img id="preview" alt="归一化后的数字预览"></p><p id="status" role="status">准备好了，请写一个数字。</p></div></section>
+<p class="foot">识别由开发板中的 FPGA 卷积网络完成。JTAG 传输需要等待片刻；断开开发板后会显示连接错误。</p>
+</main>
+<script>
+const canvas=document.querySelector('#canvas'),ctx=canvas.getContext('2d'),predict=document.querySelector('#predict'),clear=document.querySelector('#clear'),result=document.querySelector('#result'),status=document.querySelector('#status'),preview=document.querySelector('#preview'),file=document.querySelector('#file');
+let drawing=false,busy=false,uploaded=null;
+function reset(){uploaded=null;ctx.fillStyle='black';ctx.fillRect(0,0,280,280);result.textContent='—';preview.src='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"><rect width="28" height="28" fill="black"/></svg>');status.textContent='准备好了，请写一个数字。';}
+function point(e){const r=canvas.getBoundingClientRect();return[(e.clientX-r.left)*280/r.width,(e.clientY-r.top)*280/r.height];}
+canvas.onpointerdown=e=>{if(busy)return;if(uploaded)reset();e.preventDefault();canvas.setPointerCapture(e.pointerId);drawing=true;let[x,y]=point(e);ctx.strokeStyle='white';ctx.fillStyle='white';ctx.lineWidth=+document.querySelector('#width').value;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();ctx.arc(x,y,ctx.lineWidth/2,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.moveTo(x,y);};
+canvas.onpointermove=e=>{if(!drawing)return;let[x,y]=point(e);ctx.lineTo(x,y);ctx.stroke();};
+canvas.onpointerup=canvas.onpointercancel=()=>{drawing=false;};
+clear.onclick=reset;
+file.onchange=()=>{if(busy||!file.files[0])return;const reader=new FileReader();reader.onload=()=>{const img=new Image();img.onload=()=>{reset();uploaded=reader.result;const s=Math.min(280/img.width,280/img.height),w=img.width*s,h=img.height*s;ctx.drawImage(img,(280-w)/2,(280-h)/2,w,h);status.textContent='图片已载入，可以识别。';file.value='';};img.src=reader.result;};reader.readAsDataURL(file.files[0]);};
+async function post(url,body){const response=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(100000)});const value=await response.json();if(!response.ok)throw Error(value.error||'请求失败');return value;}
+predict.onclick=async()=>{if(busy)return;busy=true;drawing=false;predict.disabled=clear.disabled=file.disabled=true;result.textContent='—';try{let body={base64str:uploaded||canvas.toDataURL('image/png')};status.textContent='正在整理笔迹…';let prepared=await post('/prepare',body);preview.src=prepared.preview;status.textContent='正在等待开发板识别，请勿重复点击…';let response=await post('/',body);result.textContent=response.prediction;preview.src=response.preview;status.textContent=`识别完成，用时 ${response.elapsed_s} 秒。`;}catch(e){status.textContent=e.message||'识别失败';}finally{busy=false;predict.disabled=clear.disabled=file.disabled=false;}};
+reset();
+</script></html>

@@ -1,0 +1,38 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5003
+Press CTRL+C to quit
+127.0.0.1 - - [25/Oct/2026 20:07:57] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:07:58] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 20:08:02] "POST /prepare HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:08:05] "GET / HTTP/1.1" 200 -
+[2026-10-25 20:08:07,944] WARNING in app: Board inference failed: XSCT JTAG inference failed:
+****** Software Commandline Tool (XSCT) v2025.2.0
+  **** SW Build 6298600 on Thu Nov 13 01:12:30 MST 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+Warning: XSCT is deprecated and will be removed in future releases.
+We recommend using the new Python command-line tool for project management and debugging:
+- Run "vitis -i" for interactive mode.
+- Run "vitis -s <script>" for script mode.
+
+^C
+127.0.0.1 - - [25/Oct/2026 20:08:07] "POST / HTTP/1.1" 503 -
+127.0.0.1 - - [25/Oct/2026 20:08:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:08:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:08:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:08:26] "POST /prepare HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:08:31] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:08:31] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 20:08:37] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:08:45] "POST /prepare HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:08:56] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:09:04] "POST /prepare HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:09:16] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:09:22] "POST /prepare HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:09:33] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:09:47] "POST /prepare HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:09:58] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:12:12] "POST /prepare HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 20:12:22] "POST / HTTP/1.1" 200 -

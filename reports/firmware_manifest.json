@@ -1,0 +1,37 @@
+{
+  "method": "Vitis 2025.2 generated BSP + ARM GCC, without Eclipse app create",
+  "bsp_xsa_sha256": "61d19bdcb84e336ed374170b3a3f86f820ba49c0c6c6827881a538dee5b1054c",
+  "bsp_libxil_sha256": "634a90283cacca6cda84e8c8622abda067da8413941aa60e26b7b484563d8ae8",
+  "applications": {
+    "cnn_mnist_jtag_mailbox": {
+      "entry": "0x100000",
+      "load_segments": [
+        {
+          "start": "0x100000",
+          "end": "0x105930",
+          "bytes": 22832
+        },
+        {
+          "start": "0x108000",
+          "end": "0x112110",
+          "bytes": 41232
+        }
+      ]
+    },
+    "cnn_mnist_uart_service": {
+      "entry": "0x100000",
+      "load_segments": [
+        {
+          "start": "0x100000",
+          "end": "0x106000",
+          "bytes": 24576
+        },
+        {
+          "start": "0x108000",
+          "end": "0x112510",
+          "bytes": 42256
+        }
+      ]
+    }
+  }
+}

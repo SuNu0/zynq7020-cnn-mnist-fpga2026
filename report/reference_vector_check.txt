@@ -1,0 +1,5 @@
+features1 MEM_COMPARE_PASS values=86400 bits=16 signed=False
+features2 MEM_COMPARE_PASS values=19200 bits=16 signed=False
+scores MEM_COMPARE_PASS values=750 bits=48 signed=True
+predictions MEM_COMPARE_PASS values=75 bits=8 signed=False
+V3_REFERENCE_VECTOR_PASS cases=75 pooled_values=105600 scores=750

@@ -1,0 +1,602 @@
+[
+  {
+    "digit": 0,
+    "training_index": 144856,
+    "source_index": 197975,
+    "writer_id": 1859
+  },
+  {
+    "digit": 0,
+    "training_index": 111530,
+    "source_index": 160789,
+    "writer_id": 1514
+  },
+  {
+    "digit": 0,
+    "training_index": 193813,
+    "source_index": 310309,
+    "writer_id": 3334
+  },
+  {
+    "digit": 0,
+    "training_index": 264022,
+    "source_index": 388578,
+    "writer_id": 3979
+  },
+  {
+    "digit": 0,
+    "training_index": 44740,
+    "source_index": 86030,
+    "writer_id": 803
+  },
+  {
+    "digit": 0,
+    "training_index": 244482,
+    "source_index": 367131,
+    "writer_id": 3802
+  },
+  {
+    "digit": 0,
+    "training_index": 106037,
+    "source_index": 153915,
+    "writer_id": 1450
+  },
+  {
+    "digit": 0,
+    "training_index": 272205,
+    "source_index": 397356,
+    "writer_id": 4052
+  },
+  {
+    "digit": 0,
+    "training_index": 64447,
+    "source_index": 108002,
+    "writer_id": 1012
+  },
+  {
+    "digit": 0,
+    "training_index": 240966,
+    "source_index": 363358,
+    "writer_id": 3770
+  },
+  {
+    "digit": 1,
+    "training_index": 185666,
+    "source_index": 300934,
+    "writer_id": 3257
+  },
+  {
+    "digit": 1,
+    "training_index": 201549,
+    "source_index": 319051,
+    "writer_id": 3405
+  },
+  {
+    "digit": 1,
+    "training_index": 214457,
+    "source_index": 333561,
+    "writer_id": 3523
+  },
+  {
+    "digit": 1,
+    "training_index": 241442,
+    "source_index": 363834,
+    "writer_id": 3774
+  },
+  {
+    "digit": 1,
+    "training_index": 153619,
+    "source_index": 207192,
+    "writer_id": 1944
+  },
+  {
+    "digit": 1,
+    "training_index": 96176,
+    "source_index": 143286,
+    "writer_id": 1349
+  },
+  {
+    "digit": 1,
+    "training_index": 125893,
+    "source_index": 176980,
+    "writer_id": 1661
+  },
+  {
+    "digit": 1,
+    "training_index": 63204,
+    "source_index": 106549,
+    "writer_id": 998
+  },
+  {
+    "digit": 1,
+    "training_index": 16490,
+    "source_index": 54000,
+    "writer_id": 504
+  },
+  {
+    "digit": 1,
+    "training_index": 273469,
+    "source_index": 398620,
+    "writer_id": 4063
+  },
+  {
+    "digit": 2,
+    "training_index": 156781,
+    "source_index": 210455,
+    "writer_id": 1976
+  },
+  {
+    "digit": 2,
+    "training_index": 54989,
+    "source_index": 97400,
+    "writer_id": 911
+  },
+  {
+    "digit": 2,
+    "training_index": 187960,
+    "source_index": 303590,
+    "writer_id": 3279
+  },
+  {
+    "digit": 2,
+    "training_index": 179046,
+    "source_index": 293861,
+    "writer_id": 3199
+  },
+  {
+    "digit": 2,
+    "training_index": 93313,
+    "source_index": 140336,
+    "writer_id": 1321
+  },
+  {
+    "digit": 2,
+    "training_index": 215427,
+    "source_index": 334655,
+    "writer_id": 3532
+  },
+  {
+    "digit": 2,
+    "training_index": 170613,
+    "source_index": 284579,
+    "writer_id": 3123
+  },
+  {
+    "digit": 2,
+    "training_index": 184280,
+    "source_index": 299330,
+    "writer_id": 3244
+  },
+  {
+    "digit": 2,
+    "training_index": 148330,
+    "source_index": 201686,
+    "writer_id": 1893
+  },
+  {
+    "digit": 2,
+    "training_index": 263192,
+    "source_index": 387620,
+    "writer_id": 3971
+  },
+  {
+    "digit": 3,
+    "training_index": 73822,
+    "source_index": 118926,
+    "writer_id": 1118
+  },
+  {
+    "digit": 3,
+    "training_index": 123621,
+    "source_index": 174708,
+    "writer_id": 1641
+  },
+  {
+    "digit": 3,
+    "training_index": 15684,
+    "source_index": 53194,
+    "writer_id": 497
+  },
+  {
+    "digit": 3,
+    "training_index": 253409,
+    "source_index": 377069,
+    "writer_id": 3884
+  },
+  {
+    "digit": 3,
+    "training_index": 151686,
+    "source_index": 205165,
+    "writer_id": 1925
+  },
+  {
+    "digit": 3,
+    "training_index": 207407,
+    "source_index": 325897,
+    "writer_id": 3461
+  },
+  {
+    "digit": 3,
+    "training_index": 254770,
+    "source_index": 378793,
+    "writer_id": 3898
+  },
+  {
+    "digit": 3,
+    "training_index": 36636,
+    "source_index": 76936,
+    "writer_id": 715
+  },
+  {
+    "digit": 3,
+    "training_index": 92081,
+    "source_index": 139104,
+    "writer_id": 1310
+  },
+  {
+    "digit": 3,
+    "training_index": 140464,
+    "source_index": 193379,
+    "writer_id": 1816
+  },
+  {
+    "digit": 4,
+    "training_index": 136491,
+    "source_index": 188591,
+    "writer_id": 1772
+  },
+  {
+    "digit": 4,
+    "training_index": 192009,
+    "source_index": 308126,
+    "writer_id": 3317
+  },
+  {
+    "digit": 4,
+    "training_index": 67733,
+    "source_index": 112172,
+    "writer_id": 1052
+  },
+  {
+    "digit": 4,
+    "training_index": 213785,
+    "source_index": 332889,
+    "writer_id": 3517
+  },
+  {
+    "digit": 4,
+    "training_index": 225600,
+    "source_index": 346010,
+    "writer_id": 3626
+  },
+  {
+    "digit": 4,
+    "training_index": 24389,
+    "source_index": 62816,
+    "writer_id": 586
+  },
+  {
+    "digit": 4,
+    "training_index": 219717,
+    "source_index": 339520,
+    "writer_id": 3572
+  },
+  {
+    "digit": 4,
+    "training_index": 168998,
+    "source_index": 282724,
+    "writer_id": 3107
+  },
+  {
+    "digit": 4,
+    "training_index": 238228,
+    "source_index": 360368,
+    "writer_id": 3746
+  },
+  {
+    "digit": 4,
+    "training_index": 25980,
+    "source_index": 64522,
+    "writer_id": 602
+  },
+  {
+    "digit": 5,
+    "training_index": 143489,
+    "source_index": 196608,
+    "writer_id": 1845
+  },
+  {
+    "digit": 5,
+    "training_index": 206322,
+    "source_index": 324690,
+    "writer_id": 3451
+  },
+  {
+    "digit": 5,
+    "training_index": 260651,
+    "source_index": 384949,
+    "writer_id": 3949
+  },
+  {
+    "digit": 5,
+    "training_index": 232664,
+    "source_index": 354426,
+    "writer_id": 3695
+  },
+  {
+    "digit": 5,
+    "training_index": 233376,
+    "source_index": 355138,
+    "writer_id": 3701
+  },
+  {
+    "digit": 5,
+    "training_index": 90656,
+    "source_index": 137679,
+    "writer_id": 1296
+  },
+  {
+    "digit": 5,
+    "training_index": 133483,
+    "source_index": 185135,
+    "writer_id": 1739
+  },
+  {
+    "digit": 5,
+    "training_index": 260717,
+    "source_index": 385015,
+    "writer_id": 3950
+  },
+  {
+    "digit": 5,
+    "training_index": 199253,
+    "source_index": 316501,
+    "writer_id": 3385
+  },
+  {
+    "digit": 5,
+    "training_index": 118475,
+    "source_index": 168605,
+    "writer_id": 1587
+  },
+  {
+    "digit": 6,
+    "training_index": 113092,
+    "source_index": 162581,
+    "writer_id": 1530
+  },
+  {
+    "digit": 6,
+    "training_index": 199259,
+    "source_index": 316507,
+    "writer_id": 3385
+  },
+  {
+    "digit": 6,
+    "training_index": 123653,
+    "source_index": 174740,
+    "writer_id": 1642
+  },
+  {
+    "digit": 6,
+    "training_index": 146746,
+    "source_index": 199865,
+    "writer_id": 1876
+  },
+  {
+    "digit": 6,
+    "training_index": 101967,
+    "source_index": 149480,
+    "writer_id": 1407
+  },
+  {
+    "digit": 6,
+    "training_index": 110567,
+    "source_index": 159100,
+    "writer_id": 1498
+  },
+  {
+    "digit": 6,
+    "training_index": 83134,
+    "source_index": 129192,
+    "writer_id": 1215
+  },
+  {
+    "digit": 6,
+    "training_index": 176199,
+    "source_index": 290413,
+    "writer_id": 3169
+  },
+  {
+    "digit": 6,
+    "training_index": 276985,
+    "source_index": 402483,
+    "writer_id": 4095
+  },
+  {
+    "digit": 6,
+    "training_index": 29363,
+    "source_index": 68224,
+    "writer_id": 635
+  },
+  {
+    "digit": 7,
+    "training_index": 181301,
+    "source_index": 296236,
+    "writer_id": 3218
+  },
+  {
+    "digit": 7,
+    "training_index": 15789,
+    "source_index": 53299,
+    "writer_id": 498
+  },
+  {
+    "digit": 7,
+    "training_index": 89916,
+    "source_index": 136862,
+    "writer_id": 1287
+  },
+  {
+    "digit": 7,
+    "training_index": 62128,
+    "source_index": 105393,
+    "writer_id": 987
+  },
+  {
+    "digit": 7,
+    "training_index": 181701,
+    "source_index": 296636,
+    "writer_id": 3221
+  },
+  {
+    "digit": 7,
+    "training_index": 121552,
+    "source_index": 172053,
+    "writer_id": 1617
+  },
+  {
+    "digit": 7,
+    "training_index": 86569,
+    "source_index": 132964,
+    "writer_id": 1251
+  },
+  {
+    "digit": 7,
+    "training_index": 214376,
+    "source_index": 333480,
+    "writer_id": 3522
+  },
+  {
+    "digit": 7,
+    "training_index": 113951,
+    "source_index": 163542,
+    "writer_id": 1539
+  },
+  {
+    "digit": 7,
+    "training_index": 66614,
+    "source_index": 110833,
+    "writer_id": 1039
+  },
+  {
+    "digit": 8,
+    "training_index": 222136,
+    "source_index": 342416,
+    "writer_id": 3596
+  },
+  {
+    "digit": 8,
+    "training_index": 177548,
+    "source_index": 291881,
+    "writer_id": 3183
+  },
+  {
+    "digit": 8,
+    "training_index": 180864,
+    "source_index": 295799,
+    "writer_id": 3215
+  },
+  {
+    "digit": 8,
+    "training_index": 229675,
+    "source_index": 350710,
+    "writer_id": 3665
+  },
+  {
+    "digit": 8,
+    "training_index": 135846,
+    "source_index": 187946,
+    "writer_id": 1765
+  },
+  {
+    "digit": 8,
+    "training_index": 247262,
+    "source_index": 370282,
+    "writer_id": 3829
+  },
+  {
+    "digit": 8,
+    "training_index": 197329,
+    "source_index": 314446,
+    "writer_id": 3368
+  },
+  {
+    "digit": 8,
+    "training_index": 181120,
+    "source_index": 296055,
+    "writer_id": 3217
+  },
+  {
+    "digit": 8,
+    "training_index": 249001,
+    "source_index": 372151,
+    "writer_id": 3844
+  },
+  {
+    "digit": 8,
+    "training_index": 243143,
+    "source_index": 365662,
+    "writer_id": 3789
+  },
+  {
+    "digit": 9,
+    "training_index": 173277,
+    "source_index": 287491,
+    "writer_id": 3146
+  },
+  {
+    "digit": 9,
+    "training_index": 59155,
+    "source_index": 101694,
+    "writer_id": 951
+  },
+  {
+    "digit": 9,
+    "training_index": 13031,
+    "source_index": 50072,
+    "writer_id": 468
+  },
+  {
+    "digit": 9,
+    "training_index": 238975,
+    "source_index": 361239,
+    "writer_id": 3753
+  },
+  {
+    "digit": 9,
+    "training_index": 232149,
+    "source_index": 353911,
+    "writer_id": 3691
+  },
+  {
+    "digit": 9,
+    "training_index": 88733,
+    "source_index": 135341,
+    "writer_id": 1273
+  },
+  {
+    "digit": 9,
+    "training_index": 157494,
+    "source_index": 211264,
+    "writer_id": 1986
+  },
+  {
+    "digit": 9,
+    "training_index": 84335,
+    "source_index": 130730,
+    "writer_id": 1230
+  },
+  {
+    "digit": 9,
+    "training_index": 124883,
+    "source_index": 175970,
+    "writer_id": 1652
+  },
+  {
+    "digit": 9,
+    "training_index": 143755,
+    "source_index": 196874,
+    "writer_id": 1848
+  }
+]

@@ -1,0 +1,1372 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Oct 25 13:00:45 2026
+# Process ID         : 42892
+# Current directory  : <workspace>/cnn_mnist_haoyue_z7020_V3
+# Command line       : vivado.exe -mode batch -source scripts\build_hardware.tcl -log reports\hardware_build.log -journal reports\hardware_build.jou
+# Log file           : <workspace>/cnn_mnist_haoyue_z7020_V3/reports/hardware_build.log
+# Journal file       : <workspace>/cnn_mnist_haoyue_z7020_V3\reports\hardware_build.jou
+# Running On         : Su-nuo
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 9 8940HX with Radeon Graphics        
+# CPU Frequency      : 2395 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 16962 MB
+# Swap memory        : 16962 MB
+# Total Virtual      : 33924 MB
+# Available Virtual  : 6736 MB
+#-----------------------------------------------------------
+source {scripts\build_hardware.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set root [file normalize "$script_dir/.."]
+# set project "$root/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.xpr"
+# set output "$root/output"
+# file mkdir $output
+# if {![file exists $project]} {
+#     source "$script_dir/create_project.tcl"
+# } else {
+#     open_project $project
+# }
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\ac701\1.4\board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24i\1.0\board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.0\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.1\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\scu35\1.0\board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.0\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.1\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu104\1.1\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.4\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.5\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.6\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Xilinx/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.2/Vivado/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 537.113 ; gain = 231.031
+# reset_run synth_1
+# launch_runs synth_1 -jobs 1
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Oct 25 13:01:30 2026] Launched system_processing_system7_0_0_synth_1, system_axi_dma_0_0_synth_1, system_rst_ps7_0_100M_0_synth_1, system_ps7_gp0_axi_periph_imp_auto_pc_0_synth_1, system_dma_hp0_interconnect_imp_xbar_0_synth_1, system_dma_hp0_interconnect_imp_auto_pc_0_synth_1, system_dma_hp0_interconnect_imp_auto_pc_1_synth_1, system_axis_cnn_mnist_0_0_synth_1, system_dma_hp0_interconnect_imp_auto_us_1_synth_1, system_dma_hp0_interconnect_imp_auto_us_0_synth_1...
+Run output will be captured here:
+system_processing_system7_0_0_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_processing_system7_0_0_synth_1/runme.log
+system_axi_dma_0_0_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_axi_dma_0_0_synth_1/runme.log
+system_rst_ps7_0_100M_0_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_rst_ps7_0_100M_0_synth_1/runme.log
+system_ps7_gp0_axi_periph_imp_auto_pc_0_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_ps7_gp0_axi_periph_imp_auto_pc_0_synth_1/runme.log
+system_dma_hp0_interconnect_imp_xbar_0_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_dma_hp0_interconnect_imp_xbar_0_synth_1/runme.log
+system_dma_hp0_interconnect_imp_auto_pc_0_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_dma_hp0_interconnect_imp_auto_pc_0_synth_1/runme.log
+system_dma_hp0_interconnect_imp_auto_pc_1_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_dma_hp0_interconnect_imp_auto_pc_1_synth_1/runme.log
+system_axis_cnn_mnist_0_0_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_axis_cnn_mnist_0_0_synth_1/runme.log
+system_dma_hp0_interconnect_imp_auto_us_1_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_dma_hp0_interconnect_imp_auto_us_1_synth_1/runme.log
+system_dma_hp0_interconnect_imp_auto_us_0_synth_1: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/system_dma_hp0_interconnect_imp_auto_us_0_synth_1/runme.log
+[Sun Oct 25 13:01:30 2026] Launched synth_1...
+Run output will be captured here: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 576.598 ; gain = 39.484
+# wait_on_run synth_1
+[Sun Oct 25 13:01:30 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log system_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 13:08:00 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 525.789 ; gain = 220.992
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.2/Vivado/data/ip'.
+Command: synth_design -top system_wrapper -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 50336
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1329.941 ; gain = 539.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'system' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:883]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_dma_0_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_dma_0_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1081]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1081]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tlast' of module 'system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1081]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1081]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1081]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1081]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1081]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'system_axi_dma_0_0' has 64 connections declared, but only 57 given [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1081]
+INFO: [Synth 8-6157] synthesizing module 'system_axis_cnn_mnist_0_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_axis_cnn_mnist_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axis_cnn_mnist_0_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_axis_cnn_mnist_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_dma_hp0_interconnect_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1399]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_CHB650' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_CHB650' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_7M9IYT' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:488]
+INFO: [Synth 8-6157] synthesizing module 'system_dma_hp0_interconnect_imp_auto_pc_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_dma_hp0_interconnect_imp_auto_pc_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_dma_hp0_interconnect_imp_auto_us_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_dma_hp0_interconnect_imp_auto_us_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_7M9IYT' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:488]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1E940D0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:669]
+INFO: [Synth 8-6157] synthesizing module 'system_dma_hp0_interconnect_imp_auto_pc_1' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_dma_hp0_interconnect_imp_auto_pc_1' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_dma_hp0_interconnect_imp_auto_us_1' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_dma_hp0_interconnect_imp_auto_us_1' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1E940D0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:669]
+INFO: [Synth 8-6157] synthesizing module 'system_dma_hp0_interconnect_imp_xbar_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_dma_hp0_interconnect_imp_xbar_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_dma_hp0_interconnect_imp_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'system_dma_hp0_interconnect_imp_xbar_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1898]
+WARNING: [Synth 8-689] width (64) of port connection 's_axi_rdata' does not match port width (128) of module 'system_dma_hp0_interconnect_imp_xbar_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1915]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'system_dma_hp0_interconnect_imp_xbar_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1916]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'system_dma_hp0_interconnect_imp_xbar_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1918]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'system_dma_hp0_interconnect_imp_xbar_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1919]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'system_dma_hp0_interconnect_imp_xbar_0' is unconnected for instance 'xbar' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1849]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'system_dma_hp0_interconnect_imp_xbar_0' is unconnected for instance 'xbar' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1849]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'system_dma_hp0_interconnect_imp_xbar_0' has 78 connections declared, but only 76 given [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1849]
+INFO: [Synth 8-6155] done synthesizing module 'system_dma_hp0_interconnect_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1399]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1225]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1225]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1225]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1225]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_0' has 107 connections declared, but only 103 given [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1225]
+INFO: [Synth 8-6157] synthesizing module 'system_ps7_gp0_axi_periph_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1928]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1BRBQPS' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:254]
+INFO: [Synth 8-6157] synthesizing module 'system_ps7_gp0_axi_periph_imp_auto_pc_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_ps7_gp0_axi_periph_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps7_gp0_axi_periph_imp_auto_pc_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_ps7_gp0_axi_periph_imp_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'system_ps7_gp0_axi_periph_imp_auto_pc_0' is unconnected for instance 'auto_pc' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:429]
+WARNING: [Synth 8-7071] port 'm_axi_wstrb' of module 'system_ps7_gp0_axi_periph_imp_auto_pc_0' is unconnected for instance 'auto_pc' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:429]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'system_ps7_gp0_axi_periph_imp_auto_pc_0' is unconnected for instance 'auto_pc' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:429]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'system_ps7_gp0_axi_periph_imp_auto_pc_0' has 59 connections declared, but only 56 given [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:429]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1BRBQPS' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:254]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps7_gp0_axi_periph_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1928]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_ps7_0_100M_0' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps7_0_100M_0' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/.Xil/Vivado-47912-Su-nuo/realtime/system_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1390]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1390]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1390]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1390]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:1390]
+INFO: [Synth 8-6155] done synthesizing module 'system' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v:883]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (0#1) [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1BRBQPS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1BRBQPS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module system_ps7_gp0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module system_ps7_gp0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_1E940D0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s01_couplers_imp_1E940D0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_7M9IYT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_7M9IYT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_CHB650 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_CHB650 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_CHB650 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_CHB650 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1460.578 ; gain = 669.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1460.578 ; gain = 669.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1460.578 ; gain = 669.758
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1460.578 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0/system_axi_dma_0_0_in_context.xdc] for cell 'system_i/axi_dma_0'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0/system_axi_dma_0_0_in_context.xdc] for cell 'system_i/axi_dma_0'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_in_context.xdc] for cell 'system_i/rst_ps7_0_100M'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_in_context.xdc] for cell 'system_i/rst_ps7_0_100M'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_ps7_gp0_axi_periph_imp_auto_pc_0/system_ps7_gp0_axi_periph_imp_auto_pc_0/system_ps7_gp0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'system_i/ps7_gp0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_ps7_gp0_axi_periph_imp_auto_pc_0/system_ps7_gp0_axi_periph_imp_auto_pc_0/system_ps7_gp0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'system_i/ps7_gp0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_xbar_0/system_dma_hp0_interconnect_imp_xbar_0/system_dma_hp0_interconnect_imp_xbar_0_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/xbar'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_xbar_0/system_dma_hp0_interconnect_imp_xbar_0/system_dma_hp0_interconnect_imp_xbar_0_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/xbar'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_pc_0/system_dma_hp0_interconnect_imp_auto_pc_0/system_dma_hp0_interconnect_imp_auto_pc_0_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/s00_couplers/auto_pc'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_pc_0/system_dma_hp0_interconnect_imp_auto_pc_0/system_dma_hp0_interconnect_imp_auto_pc_0_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/s00_couplers/auto_pc'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_0/system_dma_hp0_interconnect_imp_auto_us_0/system_dma_hp0_interconnect_imp_auto_us_0_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/s00_couplers/auto_us'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_0/system_dma_hp0_interconnect_imp_auto_us_0/system_dma_hp0_interconnect_imp_auto_us_0_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/s00_couplers/auto_us'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_pc_1/system_dma_hp0_interconnect_imp_auto_pc_1/system_dma_hp0_interconnect_imp_auto_pc_1_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/s01_couplers/auto_pc'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_pc_1/system_dma_hp0_interconnect_imp_auto_pc_1/system_dma_hp0_interconnect_imp_auto_pc_1_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/s01_couplers/auto_pc'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_1/system_dma_hp0_interconnect_imp_auto_us_1/system_dma_hp0_interconnect_imp_auto_us_1_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/s01_couplers/auto_us'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_1/system_dma_hp0_interconnect_imp_auto_us_1/system_dma_hp0_interconnect_imp_auto_us_1_in_context.xdc] for cell 'system_i/dma_hp0_interconnect/s01_couplers/auto_us'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axis_cnn_mnist_0_0/system_axis_cnn_mnist_0_0/system_axis_cnn_mnist_0_0_in_context.xdc] for cell 'system_i/axis_cnn_mnist_0'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axis_cnn_mnist_0_0/system_axis_cnn_mnist_0_0/system_axis_cnn_mnist_0_0_in_context.xdc] for cell 'system_i/axis_cnn_mnist_0'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1460.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1460.578 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.578 ; gain = 669.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.578 ; gain = 669.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.578 ; gain = 669.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.578 ; gain = 669.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port ACLK in module system_ps7_gp0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module system_ps7_gp0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module system_ps7_gp0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module system_ps7_gp0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[5] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[4] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[3] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[2] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[1] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[5] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[4] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[3] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[2] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[1] in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module system_dma_hp0_interconnect_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1462.316 ; gain = 671.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1635.469 ; gain = 844.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1636.473 ; gain = 845.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1646.578 ; gain = 855.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1895.195 ; gain = 1104.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1895.195 ; gain = 1104.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1895.195 ; gain = 1104.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1895.195 ; gain = 1104.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1895.195 ; gain = 1104.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1895.195 ; gain = 1104.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------------------+----------+
+|      |BlackBox name                             |Instances |
++------+------------------------------------------+----------+
+|1     |system_axi_dma_0_0                        |         1|
+|2     |system_axis_cnn_mnist_0_0                 |         1|
+|3     |system_dma_hp0_interconnect_imp_xbar_0    |         1|
+|4     |system_dma_hp0_interconnect_imp_auto_pc_0 |         1|
+|5     |system_dma_hp0_interconnect_imp_auto_us_0 |         1|
+|6     |system_dma_hp0_interconnect_imp_auto_pc_1 |         1|
+|7     |system_dma_hp0_interconnect_imp_auto_us_1 |         1|
+|8     |system_processing_system7_0_0             |         1|
+|9     |system_ps7_gp0_axi_periph_imp_auto_pc_0   |         1|
+|10    |system_rst_ps7_0_100M_0                   |         1|
++------+------------------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------------------+------+
+|      |Cell                                    |Count |
++------+----------------------------------------+------+
+|1     |system_axi_dma_0                        |     1|
+|2     |system_axis_cnn_mnist_0                 |     1|
+|3     |system_dma_hp0_interconnect_imp_auto_pc |     2|
+|5     |system_dma_hp0_interconnect_imp_auto_us |     2|
+|7     |system_dma_hp0_interconnect_imp_xbar    |     1|
+|8     |system_processing_system7_0             |     1|
+|9     |system_ps7_gp0_axi_periph_imp_auto_pc   |     1|
+|10    |system_rst_ps7_0_100M                   |     1|
++------+----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1895.195 ; gain = 1104.375
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1895.195 ; gain = 1104.375
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1895.195 ; gain = 1104.375
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1895.195 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1907.992 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: b546a61b
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:38 . Memory (MB): peak = 1911.988 ; gain = 1371.738
+INFO: [Common 17-1381] The checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/synth_1/system_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 13:09:03 2026...
+[Sun Oct 25 13:09:04 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:07:34 . Memory (MB): peak = 576.598 ; gain = 0.000
+# if {[get_property STATUS [get_runs synth_1]] ne {synth_design Complete!}} {
+#     error "SYNTHESIS_FAILED:[get_property STATUS [get_runs synth_1]]"
+# }
+# launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Oct 25 13:09:07 2026] Launched impl_1...
+Run output will be captured here: <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/impl_1/runme.log
+# wait_on_run impl_1
+[Sun Oct 25 13:09:07 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log system_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 13:09:15 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 526.277 ; gain = 222.984
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.2/Vivado/data/ip'.
+Command: link_design -top system_wrapper -part xc7z020clg400-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0.dcp' for cell 'system_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axis_cnn_mnist_0_0/system_axis_cnn_mnist_0_0.dcp' for cell 'system_i/axis_cnn_mnist_0'
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp' for cell 'system_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.dcp' for cell 'system_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_xbar_0/system_dma_hp0_interconnect_imp_xbar_0.dcp' for cell 'system_i/dma_hp0_interconnect/xbar'
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_pc_0/system_dma_hp0_interconnect_imp_auto_pc_0.dcp' for cell 'system_i/dma_hp0_interconnect/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_0/system_dma_hp0_interconnect_imp_auto_us_0.dcp' for cell 'system_i/dma_hp0_interconnect/s00_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_pc_1/system_dma_hp0_interconnect_imp_auto_pc_1.dcp' for cell 'system_i/dma_hp0_interconnect/s01_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_1/system_dma_hp0_interconnect_imp_auto_us_1.dcp' for cell 'system_i/dma_hp0_interconnect/s01_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_ps7_gp0_axi_periph_imp_auto_pc_0/system_ps7_gp0_axi_periph_imp_auto_pc_0.dcp' for cell 'system_i/ps7_gp0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.189 . Memory (MB): peak = 837.609 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 877 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.333330 which will be rounded to 0.333 to ensure it is an integer multiple of 1 picosecond [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc:21]
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0.xdc] for cell 'system_i/axi_dma_0/U0'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0.xdc] for cell 'system_i/axi_dma_0/U0'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_clocks.xdc] for cell 'system_i/axi_dma_0/U0'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_clocks.xdc] for cell 'system_i/axi_dma_0/U0'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_0/system_dma_hp0_interconnect_imp_auto_us_0_clocks.xdc] for cell 'system_i/dma_hp0_interconnect/s00_couplers/auto_us/inst'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_0/system_dma_hp0_interconnect_imp_auto_us_0_clocks.xdc] for cell 'system_i/dma_hp0_interconnect/s00_couplers/auto_us/inst'
+Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_1/system_dma_hp0_interconnect_imp_auto_us_1_clocks.xdc] for cell 'system_i/dma_hp0_interconnect/s01_couplers/auto_us/inst'
+Finished Parsing XDC File [<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_1/system_dma_hp0_interconnect_imp_auto_us_1_clocks.xdc] for cell 'system_i/dma_hp0_interconnect/s01_couplers/auto_us/inst'
+INFO: [Project 1-1714] 10 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1497.285 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 176 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM64M => RAM64M (RAMD64E(x4)): 149 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 22 instances
+
+22 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1497.285 ; gain = 937.734
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.803 . Memory (MB): peak = 1497.285 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1d8081b41
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.371 . Memory (MB): peak = 1499.004 ; gain = 1.719
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 1d8081b41
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1d8081b41
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 1 Initialization | Checksum: 1d8081b41
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 1d8081b41
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 1d8081b41
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.264 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 1d8081b41
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.273 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 1d8081b41
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.275 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 5 inverters resulting in an inversion of 47 pins
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 6 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 229b7a959
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.508 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Retarget | Checksum: 229b7a959
+INFO: [Opt 31-389] Phase Retarget created 38 cells and removed 131 cells
+INFO: [Opt 31-1021] In phase Retarget, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 6 inverter(s) to 19 load pin(s).
+Phase 4 Constant propagation | Checksum: 1b4c4f5c9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.782 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Constant propagation | Checksum: 1b4c4f5c9
+INFO: [Opt 31-389] Phase Constant propagation created 199 cells and removed 706 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 5 Sweep | Checksum: 1949bf8c6
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Sweep | Checksum: 1949bf8c6
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 334 cells
+INFO: [Opt 31-1021] In phase Sweep, 97 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 1949bf8c6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1956.395 ; gain = 0.000
+BUFG optimization | Checksum: 1949bf8c6
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 1949bf8c6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Shift Register Optimization | Checksum: 1949bf8c6
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 234e965dd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Post Processing Netlist | Checksum: 234e965dd
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 33 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 1e672d71f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 1e672d71f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 9 Finalization | Checksum: 1e672d71f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              38  |             131  |                                             27  |
+|  Constant propagation         |             199  |             706  |                                             27  |
+|  Sweep                        |               0  |             334  |                                             97  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             33  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1e672d71f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 3 newly gated: 0 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: 21fa8e23c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 21fa8e23c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 21fa8e23c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+53 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1956.395 ; gain = 459.109
+INFO: [Vivado 12-24828] Executing command : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+Command: report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/impl_1/system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/impl_1/system_wrapper_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 8 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 13e932002
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13bf361fd
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.875 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1e0afcda0
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1e0afcda0
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1e0afcda0
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1db4fb974
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 174c64c3b
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 174c64c3b
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 27affc4ba
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 27affc4ba
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 288 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 112 nets or LUTs. Breaked 0 LUT, combined 112 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            112  |                   112  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            112  |                   112  |           0  |           4  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 1d1c301d5
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 19f53f031
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 19f53f031
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 20dc49656
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: a2bea6b2
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1008f17eb
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: d1e1317e
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 796f32b6
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 10f35ed8a
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 13ea05fcd
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 13ea05fcd
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 12c86f188
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.281 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1769a4dd3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.180 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1ee09c380
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.214 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 12c86f188
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:22 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.281. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 15193fbd7
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:22 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:22 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 15193fbd7
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:22 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 15193fbd7
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:23 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                2x2|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 15193fbd7
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:23 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 15193fbd7
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:23 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:23 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 22209b42b
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:23 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Ending Placer Task | Checksum: 1cee7ac54
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:23 . Memory (MB): peak = 1956.395 ; gain = 0.000
+88 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:25 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_io -file system_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_placed.rpt -pb system_wrapper_utilization_placed.pb
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file system_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.399 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.483 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/impl_1/system_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 1.281 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+99 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.424 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.512 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/impl_1/system_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: d36a9ed7 ConstDB: 0 ShapeSum: e5839a8d RouteDB: 15f972f0
+Post Restoration Checksum: NetGraph: bee6399b | NumContArr: 527dc734 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 296b5f609
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 296b5f609
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 296b5f609
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1956.395 ; gain = 0.000
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 230594486
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.401  | TNS=0.000  | WHS=-0.276 | THS=-390.512|
+
+
+Phase 2.4 Soft Constraint Pins - Fast Budgeting
+Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 18cc64c71
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:25 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 7218
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 7218
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 1c38b1328
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:25 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 1c38b1328
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:25 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 241a4a040
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:27 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 4 Initial Routing | Checksum: 241a4a040
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:27 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 1627
+ Number of Nodes with overlaps = 436
+ Number of Nodes with overlaps = 155
+ Number of Nodes with overlaps = 93
+ Number of Nodes with overlaps = 47
+ Number of Nodes with overlaps = 49
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.938  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 1f1affc9d
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:38 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 5 Rip-up And Reroute | Checksum: 1f1affc9d
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:38 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1d74e1f0b
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:39 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.034  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 6.1 Delay CleanUp | Checksum: 1d74e1f0b
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:39 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 1d74e1f0b
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:39 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 6 Delay and Skew Optimization | Checksum: 1d74e1f0b
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:39 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.034  | TNS=0.000  | WHS=0.045  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 2c17be885
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:39 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Phase 7 Post Hold Fix | Checksum: 2c17be885
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:39 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.71715 %
+  Global Horizontal Routing Utilization  = 2.07437 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 2c17be885
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:39 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 2c17be885
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:39 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 30ebef89d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:40 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 30ebef89d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:40 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.034  | TNS=0.000  | WHS=0.045  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 12 Post Router Timing | Checksum: 30ebef89d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:40 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Total Elapsed time in route_design: 40.017 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 1430308aa
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:40 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 1430308aa
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:40 . Memory (MB): peak = 1956.395 ; gain = 0.000
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+111 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:40 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
+Command: report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/impl_1/system_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/impl_1/system_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file system_wrapper_timing_summary_routed.rpt -pb system_wrapper_timing_summary_routed.pb -rpx system_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Vivado 12-24838] Running report commands "report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file system_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file system_wrapper_route_status.rpt -pb system_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+Command: report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+128 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file system_wrapper_clock_utilization_routed.rpt
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file system_wrapper_bus_skew_routed.rpt -pb system_wrapper_bus_skew_routed.pb -rpx system_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+generate_parallel_reports: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.121 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.398 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1956.395 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.559 . Memory (MB): peak = 1956.395 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.runs/impl_1/system_wrapper_routed.dcp' has been generated.
+INFO: [Memdata 28-167] Found XPM memory block system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <system_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <system_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force system_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./system_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+145 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2356.406 ; gain = 400.012
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 13:11:45 2026...
+[Sun Oct 25 13:11:46 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:02:39 . Memory (MB): peak = 576.598 ; gain = 0.000
+# if {[get_property STATUS [get_runs impl_1]] ne {write_bitstream Complete!}} {
+#     error "IMPLEMENTATION_FAILED:[get_property STATUS [get_runs impl_1]]"
+# }
+# open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.172 . Memory (MB): peak = 844.754 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 866 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 958.438 ; gain = 2.539
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1510.227 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1510.227 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1510.227 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.312 . Memory (MB): peak = 1510.227 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1510.227 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1510.227 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.466 . Memory (MB): peak = 1510.227 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.509 . Memory (MB): peak = 1510.227 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1510.227 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 179 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM64M => RAM64M (RAMD64E(x4)): 149 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 22 instances
+  SRLC32E => SRL16E: 3 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1510.227 ; gain = 933.629
+# report_utilization -file "$output/utilization.rpt"
+# report_timing_summary -file "$output/timing_summary.rpt"
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+# report_drc -file "$output/drc.rpt"
+Command: report_drc -file <workspace>/cnn_mnist_haoyue_z7020_V3/output/drc.rpt
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file <workspace>/cnn_mnist_haoyue_z7020_V3/output/drc.rpt.
+report_drc completed successfully
+# write_hw_platform -fixed -include_bit -force -file "$output/cnn_mnist_haoyue.xsa"
+INFO: [Projectvivado 1-1918] Creating Hardware Platform: <workspace>/cnn_mnist_haoyue_z7020_V3/output/cnn_mnist_haoyue.xsa ...
+INFO: [Projectvivado 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Projectvivado 1-1941] Successfully created Hardware Platform: <workspace>/cnn_mnist_haoyue_z7020_V3/output/cnn_mnist_haoyue.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (D:/Xilinx/2025.2/Vivado/data/embeddedsw) loading 1 seconds
+# set bit_file "[get_property DIRECTORY [get_runs impl_1]]/system_wrapper.bit"
+# if {![file exists $bit_file]} { error "BITSTREAM_NOT_FOUND:$bit_file" }
+# file copy -force $bit_file "$output/cnn_mnist_haoyue.bit"
+# puts "CNN_HARDWARE_BUILD_PASSED"
+CNN_HARDWARE_BUILD_PASSED
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 13:12:13 2026...

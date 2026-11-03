@@ -1,0 +1,85 @@
+
+****** Software Commandline Tool (XSCT) v2025.2.0
+  **** SW Build 6298600 on Thu Nov 13 01:12:30 MST 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+Warning: XSCT is deprecated and will be removed in future releases.
+We recommend using the new Python command-line tool for project management and debugging:
+- Run "vitis -i" for interactive mode.
+- Run "vitis -s <script>" for script mode.
+attempting to launch hw_server
+
+****** Xilinx hw_server v2025.2
+  **** Build date : Oct 28 2025 at 10:03:13
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+****** Xilinx hw_server v2025.2
+
+  **** Build date : Oct 28 2025 at 10:03:13
+
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+INFO: hw_server application started
+
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+
+INFO: To connect to this hw_server instance use url: TCP:127.0.0.1:3121
+
+
+
+BOARD_CASE_PASS index=0 label=0 prediction=0
+BOARD_CASE_PASS index=1 label=0 prediction=0
+BOARD_CASE_PASS index=2 label=0 prediction=0
+BOARD_CASE_PASS index=3 label=0 prediction=0
+BOARD_CASE_PASS index=4 label=1 prediction=1
+BOARD_CASE_PASS index=5 label=1 prediction=1
+BOARD_CASE_PASS index=6 label=1 prediction=1
+BOARD_CASE_PASS index=7 label=1 prediction=1
+BOARD_CASE_PASS index=8 label=2 prediction=2
+BOARD_CASE_PASS index=9 label=2 prediction=2
+BOARD_CASE_PASS index=10 label=2 prediction=2
+BOARD_CASE_PASS index=11 label=2 prediction=2
+BOARD_CASE_PASS index=12 label=3 prediction=3
+BOARD_CASE_PASS index=13 label=3 prediction=3
+BOARD_CASE_PASS index=14 label=3 prediction=3
+BOARD_CASE_PASS index=15 label=3 prediction=3
+BOARD_CASE_PASS index=16 label=4 prediction=4
+BOARD_CASE_PASS index=17 label=4 prediction=4
+BOARD_CASE_PASS index=18 label=4 prediction=4
+BOARD_CASE_PASS index=19 label=4 prediction=4
+BOARD_CASE_PASS index=20 label=5 prediction=5
+BOARD_CASE_PASS index=21 label=5 prediction=5
+BOARD_CASE_PASS index=22 label=5 prediction=5
+BOARD_CASE_PASS index=23 label=5 prediction=5
+BOARD_CASE_PASS index=24 label=6 prediction=6
+BOARD_CASE_PASS index=25 label=6 prediction=6
+BOARD_CASE_PASS index=26 label=6 prediction=6
+BOARD_CASE_PASS index=27 label=6 prediction=6
+BOARD_CASE_PASS index=28 label=7 prediction=7
+BOARD_CASE_PASS index=29 label=7 prediction=7
+BOARD_CASE_PASS index=30 label=7 prediction=7
+BOARD_CASE_PASS index=31 label=7 prediction=7
+BOARD_CASE_PASS index=32 label=8 prediction=8
+BOARD_CASE_PASS index=33 label=8 prediction=8
+BOARD_CASE_PASS index=34 label=8 prediction=8
+BOARD_CASE_PASS index=35 label=8 prediction=8
+BOARD_CASE_PASS index=36 label=9 prediction=9
+BOARD_CASE_PASS index=37 label=9 prediction=9
+BOARD_CASE_PASS index=38 label=9 prediction=9
+BOARD_CASE_PASS index=39 label=9 prediction=9
+V3_PHYSICAL_BOARD_PASS agreement=40/40 label_correct=40/40

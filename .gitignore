@@ -1,0 +1,11 @@
+/.venv/
+/build/
+/vivado/
+__pycache__/
+*.pyc
+*.jou
+*.wdb
+/.xil/
+/data/*
+!/data/README.md
+!/data/dataset_manifest.csv

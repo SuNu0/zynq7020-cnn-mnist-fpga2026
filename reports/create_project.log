@@ -1,0 +1,183 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Oct 25 12:56:59 2026
+# Process ID         : 57680
+# Current directory  : <workspace>/cnn_mnist_haoyue_z7020_V3
+# Command line       : vivado.exe -mode batch -source scripts\create_project.tcl -log reports\create_project.log -journal reports\create_project.jou
+# Log file           : <workspace>/cnn_mnist_haoyue_z7020_V3/reports/create_project.log
+# Journal file       : <workspace>/cnn_mnist_haoyue_z7020_V3\reports\create_project.jou
+# Running On         : Su-nuo
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 9 8940HX with Radeon Graphics        
+# CPU Frequency      : 2395 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 16962 MB
+# Swap memory        : 16962 MB
+# Total Virtual      : 33924 MB
+# Available Virtual  : 5690 MB
+#-----------------------------------------------------------
+source {scripts\create_project.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set root [file normalize "$script_dir/.."]
+# set project_dir [file normalize "$root/vivado/cnn_mnist_haoyue"]
+# file mkdir [file dirname $project_dir]
+# proc ip_vlnv {name} {
+#     set defs [get_ipdefs -all -filter "NAME == $name"]
+#     if {[llength $defs] == 0} { error "IP_NOT_FOUND:$name" }
+#     return [get_property VLNV [lindex $defs 0]]
+# }
+# create_project cnn_mnist_haoyue $project_dir -part xc7z020clg400-2 -force
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 526.723 ; gain = 221.590
+# set_property target_language Verilog [current_project]
+# add_files -norecurse [glob "$root/rtl/*.v"]
+# add_files -norecurse [glob "$root/rtl/*.mem"]
+# update_compile_order -fileset sources_1
+# create_bd_design system
+Wrote  : <<workspace>/cnn_mnist_haoyue_z7020_V3\vivado\cnn_mnist_haoyue\cnn_mnist_haoyue.srcs\sources_1\bd\system\system.bd> 
+create_bd_design: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 558.746 ; gain = 24.176
+# set ps [create_bd_cell -type ip -vlnv [ip_vlnv processing_system7] processing_system7_0]
+# set_property -dict [list \
+#     CONFIG.PCW_EN_DDR {1} \
+#     CONFIG.PCW_UIPARAM_DDR_ENABLE {1} \
+#     CONFIG.PCW_UIPARAM_DDR_PARTNO {MT41K256M16 RE-125} \
+#     CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {32 Bit} \
+#     CONFIG.PCW_CRYSTAL_PERIPHERAL_FREQMHZ {33.333333} \
+#     CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} \
+#     CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15} \
+#     CONFIG.PCW_USE_M_AXI_GP0 {1} \
+#     CONFIG.PCW_USE_S_AXI_HP0 {1} \
+#     CONFIG.PCW_EN_CLK0_PORT {1} \
+#     CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {90.0} \
+#     CONFIG.PCW_EN_RST0_PORT {1}] $ps
+# make_bd_intf_pins_external [get_bd_intf_pins $ps/DDR]
+# set_property name DDR [get_bd_intf_ports DDR_0]
+# make_bd_intf_pins_external [get_bd_intf_pins $ps/FIXED_IO]
+# set_property name FIXED_IO [get_bd_intf_ports FIXED_IO_0]
+# set dma [create_bd_cell -type ip -vlnv [ip_vlnv axi_dma] axi_dma_0]
+# set_property -dict [list \
+#     CONFIG.c_include_sg {0} \
+#     CONFIG.c_include_mm2s {1} \
+#     CONFIG.c_include_s2mm {1} \
+#     CONFIG.c_m_axis_mm2s_tdata_width {8} \
+#     CONFIG.c_s_axis_s2mm_tdata_width {8} \
+#     CONFIG.c_sg_length_width {14}] $dma
+# set rst [create_bd_cell -type ip -vlnv [ip_vlnv proc_sys_reset] rst_ps7_0_100M]
+# set gp_ic [create_bd_cell -type ip -vlnv [ip_vlnv axi_interconnect] ps7_gp0_axi_periph]
+# set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {1}] $gp_ic
+# set hp_ic [create_bd_cell -type ip -vlnv [ip_vlnv axi_interconnect] dma_hp0_interconnect]
+# set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI {1}] $hp_ic
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+WARNING: [IP_Flow 19-11770] Clock interface 'aclk' has no FREQ_HZ parameter.
+# set cnn [create_bd_cell -type module -reference axis_cnn_mnist axis_cnn_mnist_0]
+# connect_bd_intf_net [get_bd_intf_pins $ps/M_AXI_GP0] [get_bd_intf_pins $gp_ic/S00_AXI]
+# connect_bd_intf_net [get_bd_intf_pins $gp_ic/M00_AXI] [get_bd_intf_pins $dma/S_AXI_LITE]
+# connect_bd_intf_net [get_bd_intf_pins $dma/M_AXI_MM2S] [get_bd_intf_pins $hp_ic/S00_AXI]
+# connect_bd_intf_net [get_bd_intf_pins $dma/M_AXI_S2MM] [get_bd_intf_pins $hp_ic/S01_AXI]
+# connect_bd_intf_net [get_bd_intf_pins $hp_ic/M00_AXI] [get_bd_intf_pins $ps/S_AXI_HP0]
+# connect_bd_intf_net [get_bd_intf_pins $dma/M_AXIS_MM2S] [get_bd_intf_pins $cnn/s_axis]
+# connect_bd_intf_net [get_bd_intf_pins $cnn/m_axis] [get_bd_intf_pins $dma/S_AXIS_S2MM]
+# set clk_pin [get_bd_pins $ps/FCLK_CLK0]
+# connect_bd_net $clk_pin \
+#     [get_bd_pins $ps/M_AXI_GP0_ACLK] [get_bd_pins $ps/S_AXI_HP0_ACLK] \
+#     [get_bd_pins $gp_ic/ACLK] [get_bd_pins $gp_ic/S00_ACLK] [get_bd_pins $gp_ic/M00_ACLK] \
+#     [get_bd_pins $hp_ic/ACLK] [get_bd_pins $hp_ic/S00_ACLK] [get_bd_pins $hp_ic/S01_ACLK] [get_bd_pins $hp_ic/M00_ACLK] \
+#     [get_bd_pins $dma/s_axi_lite_aclk] [get_bd_pins $dma/m_axi_mm2s_aclk] [get_bd_pins $dma/m_axi_s2mm_aclk] \
+#     [get_bd_pins $cnn/aclk] [get_bd_pins $rst/slowest_sync_clk]
+# connect_bd_net [get_bd_pins $ps/FCLK_RESET0_N] [get_bd_pins $rst/ext_reset_in]
+# connect_bd_net [get_bd_pins $rst/peripheral_aresetn] \
+#     [get_bd_pins $dma/axi_resetn] [get_bd_pins $cnn/aresetn] \
+#     [get_bd_pins $gp_ic/ARESETN] [get_bd_pins $gp_ic/S00_ARESETN] [get_bd_pins $gp_ic/M00_ARESETN] \
+#     [get_bd_pins $hp_ic/ARESETN] [get_bd_pins $hp_ic/S00_ARESETN] [get_bd_pins $hp_ic/S01_ARESETN] [get_bd_pins $hp_ic/M00_ARESETN]
+# assign_bd_address
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x0000_0000 [ 1G ]>.
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x0000_0000 [ 1G ]>.
+Slave segment '/axi_dma_0/S_AXI_LITE/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4040_0000 [ 64K ]>.
+# validate_bd_design
+validate_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 694.543 ; gain = 16.996
+# save_bd_design
+Wrote  : <<workspace>/cnn_mnist_haoyue_z7020_V3\vivado\cnn_mnist_haoyue\cnn_mnist_haoyue.srcs\sources_1\bd\system\system.bd> 
+# set required [dict create \
+#     PCW_EN_DDR 1 \
+#     PCW_UIPARAM_DDR_ENABLE 1 \
+#     PCW_UIPARAM_DDR_BUS_WIDTH {32 Bit} \
+#     PCW_UART0_PERIPHERAL_ENABLE 1 \
+#     PCW_UART0_UART0_IO {MIO 14 .. 15} \
+#     PCW_USE_M_AXI_GP0 1 \
+#     PCW_USE_S_AXI_HP0 1]
+# dict for {key expected} $required {
+#     set actual [get_property CONFIG.$key $ps]
+#     puts "READBACK:$key=$actual"
+#     if {$actual ne $expected} { error "PS7_READBACK_FAIL:$key expected=$expected actual=$actual" }
+# }
+READBACK:PCW_EN_DDR=1
+READBACK:PCW_UIPARAM_DDR_ENABLE=1
+READBACK:PCW_UIPARAM_DDR_BUS_WIDTH=32 Bit
+READBACK:PCW_UART0_PERIPHERAL_ENABLE=1
+READBACK:PCW_UART0_UART0_IO=MIO 14 .. 15
+READBACK:PCW_USE_M_AXI_GP0=1
+READBACK:PCW_USE_S_AXI_HP0=1
+# puts "READBACK:DDR_PART=[get_property CONFIG.PCW_UIPARAM_DDR_PARTNO $ps]"
+READBACK:DDR_PART=MT41K256M16 RE-125
+# puts "READBACK:FCLK0_MHZ=[get_property CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ $ps]"
+READBACK:FCLK0_MHZ=90.0
+# puts "READBACK:DMA_SG=[get_property CONFIG.c_include_sg $dma]"
+READBACK:DMA_SG=0
+# puts "IP_CONFIGURATION_COVERAGE:FULL"
+IP_CONFIGURATION_COVERAGE:FULL
+# generate_target all [get_files "$project_dir/cnn_mnist_haoyue.srcs/sources_1/bd/system/system.bd"]
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dma_hp0_interconnect/xbar/m_axi_bid'(1) to pin: '/dma_hp0_interconnect/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dma_hp0_interconnect/xbar/m_axi_rid'(1) to pin: '/dma_hp0_interconnect/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/dma_hp0_interconnect/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/dma_hp0_interconnect/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/dma_hp0_interconnect/M00_AXI_awid'(1) - Only lower order bits will be connected.
+Verilog Output written to : <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dma_hp0_interconnect/xbar/m_axi_bid'(1) to pin: '/dma_hp0_interconnect/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dma_hp0_interconnect/xbar/m_axi_rid'(1) to pin: '/dma_hp0_interconnect/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/dma_hp0_interconnect/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/dma_hp0_interconnect/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/dma_hp0_interconnect/M00_AXI_awid'(1) - Only lower order bits will be connected.
+Verilog Output written to : <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/sim/system.v
+Verilog Output written to : <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_ps7_gp0_axi_periph_imp_auto_pc_0/system_ps7_gp0_axi_periph_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_gp0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dma_hp0_interconnect/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_pc_0/system_dma_hp0_interconnect_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dma_hp0_interconnect/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_0/system_dma_hp0_interconnect_imp_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dma_hp0_interconnect/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_pc_1/system_dma_hp0_interconnect_imp_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dma_hp0_interconnect/s01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/ip/system_dma_hp0_interconnect_imp_auto_us_1/system_dma_hp0_interconnect_imp_auto_us_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dma_hp0_interconnect/s01_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_cnn_mnist_0 .
+Exporting to file <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/hw_handoff/system.hwh
+Generated Hardware Definition File <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/synth/system.hwdef
+INFO: [BD 41-3262] Generated VHDL Instantiation Template file <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/system.vho
+INFO: [BD 41-3262] Generated Verilog Instantiation Template file <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/system.veo
+INFO: [BD 41-3262] Generated System Verilog Instantiation Template file <workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue/cnn_mnist_haoyue.gen/sources_1/bd/system/system_sv.sveo
+generate_target: Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 740.645 ; gain = 46.102
+# set wrapper [make_wrapper -files [get_files "$project_dir/cnn_mnist_haoyue.srcs/sources_1/bd/system/system.bd"] -top]
+# add_files -norecurse $wrapper
+# set_property top system_wrapper [get_filesets sources_1]
+# update_compile_order -fileset sources_1
+# puts "HAOYUE_CNN_PROJECT_CREATED:$project_dir"
+HAOYUE_CNN_PROJECT_CREATED:<workspace>/cnn_mnist_haoyue_z7020_V3/vivado/cnn_mnist_haoyue
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 12:58:49 2026...

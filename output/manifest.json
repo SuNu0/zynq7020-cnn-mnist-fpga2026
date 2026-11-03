@@ -1,0 +1,73 @@
+{
+  "version": "V3",
+  "target": "xc7z020clg400-2",
+  "clock_mhz": 90,
+  "physical_board": "PASS_40_CASES",
+  "training_images": 332455,
+  "added_real_images": 277455,
+  "wns_ns": 1.038,
+  "whs_ns": 0.046,
+  "v2_resources": {
+    "Slice LUTs": 5038.0,
+    "Slice Registers": 3396.0,
+    "Block RAM Tile": 2.0,
+    "DSPs": 2.0
+  },
+  "v3_resources": {
+    "Slice LUTs": 5168.0,
+    "Slice Registers": 3385.0,
+    "Block RAM Tile": 2.0,
+    "DSPs": 2.0
+  },
+  "rtl_cases": 75,
+  "pooled_values": 105600,
+  "scores": 750,
+  "v2_files_unchanged": 48,
+  "artifacts": {
+    "cnn_mnist_haoyue.bit": {
+      "bytes": 4045690,
+      "sha256": "2c0a6e581310c3b8fd380c90ec48f8cd1b45e751a48d8745f73bde9e306a99bf"
+    },
+    "cnn_mnist_haoyue.xsa": {
+      "bytes": 450191,
+      "sha256": "61d19bdcb84e336ed374170b3a3f86f820ba49c0c6c6827881a538dee5b1054c"
+    },
+    "cnn_mnist_jtag_mailbox.elf": {
+      "bytes": 250216,
+      "sha256": "68ae3cc68370d65c12b14211116979c60586319fd402918295f454aa7eb03405"
+    },
+    "cnn_mnist_uart_service.elf": {
+      "bytes": 273544,
+      "sha256": "bd4929d7e6c0b365f880070a5e756d1466e3398fdeba48017e67d55e63581073"
+    },
+    "ps7_init.tcl": {
+      "bytes": 26573,
+      "sha256": "72eddcb667ad23e242f6924c458fef084e2b11ecf7fd9a927a686a8a25a64476"
+    },
+    "utilization.rpt": {
+      "bytes": 12337,
+      "sha256": "b5c6b35f2650504324f1e8d96ff9a04a7463a33b27a5e758a485a44fb29b4e91"
+    },
+    "timing_summary.rpt": {
+      "bytes": 45040,
+      "sha256": "a4bc1e68d91402f0cb9ffe36e81d379fb69fa9b2b3240a9bdbc308dd37ac522b"
+    },
+    "drc.rpt": {
+      "bytes": 24163,
+      "sha256": "b62c3784c4ac2579482ab51126ba754fdd76e8fc1c99ac7d905ba485fe67b18d"
+    }
+  },
+  "model_sources": {
+    "model/cnn_v3.pt": "c7d60ba76b0e0ab922e8e9780d971dcdcf5c6ccffbf071f65d8cc0e6ffbe7f73",
+    "model/weights_int.npz": "8bc423c6c0e93fa546f3cd335ba8006a1ceb287f7f551918fdfbf4be0fc23ded",
+    "rtl/axis_cnn_mnist_v3.v": "cef5343cd7777ef9a40650c5f362684634a9b7e5935c5275da5ab461ad57f38d",
+    "rtl/v3_conv1_weight.mem": "0d63555a03eab0bd5070309187cbbd513312bc4878fd0b224692aaa18e2d088e",
+    "rtl/v3_conv2_weight.mem": "a1d7dcaef17c59ed2456bb05e07cb8e885a07010c6258c0b83eb2e060588a1e3",
+    "rtl/v3_fc_weight.mem": "4ac972fa71196ac0618c45a235417d6ed84eb92eeaa8176bc4d3e6cab3b47180",
+    "rtl/v3_conv1_bias.mem": "0f7f0458c61888ecb35460d56870a53e42ef7d4633c92473753bd7119cf2944f",
+    "rtl/v3_conv2_bias.mem": "313c57b5e50b5467894efa30026fe015a1921081db2f776c5ee22352789afde1",
+    "rtl/v3_fc_bias.mem": "9b0de733ae06bae0de378863d3d11c6c0753e8fa64afb80741a957f308626c05"
+  },
+  "physical_board_evidence": "reports/physical_board_test.txt",
+  "publication_note": "2026-11-03 public V3 scope; historical log paths normalized; hardware binaries unchanged; original validation dates retained."
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<workspace>/cnn_mnist_haoyue_z7020_V3\scripts\start_web.py", line 4, in <module>
+    from app import app
+  File "<workspace>/cnn_mnist_haoyue_z7020_V3\software\pc_web\app.py", line 15, in <module>
+    from preprocess import normalize_digit, png_data_url
+  File "<workspace>/cnn_mnist_haoyue_z7020_V3\software\pc_web\preprocess.py", line 4, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-03",
+  "checks": {
+    "skill_positive_and_negative_fixtures": "PASS",
+    "python_syntax": "PASS",
+    "english_paths": "PASS",
+    "renamed_entrypoints_and_preview_targets": "PASS",
+    "unused_legacy_rtl_not_distributed": "PASS",
+    "photo_gps_metadata": "ABSENT",
+    "common_secret_patterns": "NOT_FOUND",
+    "fresh_integer_reference_75_cases": "PASS_105600_POOLED_750_SCORES_75_PREDICTIONS",
+    "hardware_binaries_unchanged": "PASS",
+    "new_board_measurements": "NOT_RUN",
+    "new_place_and_route": "NOT_RUN",
+    "historical_rtl_evidence": "reports/v3_simulation.log: V3_RTL_PASS cases=75",
+    "historical_board_evidence": "reports/physical_board_test.txt: agreement=40/40 label_correct=40/40"
+  },
+  "dataset_zip_sha256": "efe4b37a96869a245bd8c8eb9fcb457832cd8277fe533f15d78d41347b753bd7"
+}

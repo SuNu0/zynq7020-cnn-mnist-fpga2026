@@ -1,0 +1,12 @@
+V3_VECTORS_READY cases=75
+v2_mnist 0.9914
+v3_mnist 0.9949
+v2_nist_new_writers 0.9902124919510624
+v3_nist_new_writers 0.9953638119768191
+v2_canvas_raw 0.4755
+v2_canvas_normalized 0.9875
+v3_canvas_raw 0.513
+v3_canvas_normalized 0.9915
+v2_mnist_normalized 0.9909
+v3_mnist_normalized 0.9945
+V3_ACCURACY_EVALUATION_PASS
